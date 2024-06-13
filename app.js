@@ -71,13 +71,14 @@ if(userCall === bb){
 };
 
 // winnner
-let showWinning=(nn,hh,bb)=>{
+let showWinning=(nn,hh,kk)=>{
     if(nn===true){
         userScore++;
         userScoreBoard.innerText=userScore;
-        msgprint.innerText=`user winthis game user beats ${hh} to ${bb}`;
+        msgprint.innerText=`user winthis game user beats ${hh} to ${kk}`;
         msgprint.style.backgroundColor="green";
         console.log("user win");
+        
         
         
         
@@ -85,7 +86,7 @@ let showWinning=(nn,hh,bb)=>{
         compScore++;
         compScoreBoard.innerText=compScore;
         console.log("use loss");
-        msgprint.innerText=`user loss this game computer beats ${hh} to ${bb} `
+        msgprint.innerText=`user loss this game computer beats ${kk} to ${hh} `;
         msgprint.style.backgroundColor="red";
     }
 }

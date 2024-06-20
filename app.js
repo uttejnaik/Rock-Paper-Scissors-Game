@@ -30,38 +30,44 @@ if(userCall === bb){
 }else{
     let user=true;
     if(userCall === "rock"){
-       user= bb==="scissors" ? false : true;
-    }else if(userCall === "rock"){
-        user= bb === "paper" ? false : true;
+        // paper or scissors
+       user= bb==="paper" ? false : true;
+    }else if(userCall === "paper"){
+        // rock or scissors
+        user= bb === "scissors" ? false : true;
     }else{
-        user= bb=== "scissors" ? false : true;
+        // rock or paper
+        user= bb=== "rock" ? false : true;
     }
     showWinning(user,userCall,bb);
 
 //     if(userCall === "rock"){
+    // paper or scissors
 //         if(bb==="paper"){
-//             msgprint.style.backgroundColor="red";
-//             console.log("user win");
-//         }else{
-//             console.log("user loss");
 //             msgprint.style.backgroundColor="green";
+//             console.log("user loss this game");
+//         }else{
+//             console.log("user win");
+//             msgprint.style.backgroundColor="red";
 //         }
 
 //     }else  if(userCall === "paper"){
+    // paper or scissors
 //         if(bb==="scissors"){
-//             console.log("user win");
+//             console.log("user loass");
 //             msgprint.style.backgroundColor="red";
 //         }else{
-//             console.log("user loss");
+//             console.log("user win thsi agme");
 //             msgprint.style.backgroundColor="green";
 //         }
 
 //     }else {
-//         if(bb==="scissors"){
-//             console.log("user win");
+    // paper or scissors
+//         if(bb==="rock"){
+//             console.log("user loss");
 //             msgprint.style.backgroundColor="red";
 //         }else{
-//             console.log("user loss");
+//             console.log("user win thsi game");
 //             msgprint.style.backgroundColor="green";
 //         }
 
@@ -75,7 +81,7 @@ let showWinning=(nn,hh,kk)=>{
     if(nn===true){
         userScore++;
         userScoreBoard.innerText=userScore;
-        msgprint.innerText=`user winthis game user beats ${hh} to ${kk}`;
+        msgprint.innerText=`user win this game user beats ${hh} to ${kk}`;
         msgprint.style.backgroundColor="green";
         console.log("user win");
         
@@ -97,4 +103,7 @@ function compOpt(){
     return arr[ randomIdx];
     // console.log(`compurt choice     ${arr[vv]}:`,arr[vv]);
 }
+
+
+
 
